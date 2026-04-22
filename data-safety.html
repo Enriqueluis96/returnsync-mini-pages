@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ReturnSync Mini Data Safety</title>
+    <meta name="description" content="Data safety summary for ReturnSync Mini." />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="./">
+          <img src="assets/app-icon.svg" alt="" />
+          <span>ReturnSync Mini</span>
+        </a>
+        <div class="nav-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="support.html">Support</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <p class="eyebrow">Data Safety</p>
+        <h1>Minimal data handling for a narrow Shopify workflow.</h1>
+        <p class="lede">
+          ReturnSync Mini is designed to process refund events without storing
+          customer, order, refund, return, sales reversal, or subscription data.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Stored</h3>
+          <p>Merchant settings, session state, billing metadata, aggregated usage counters, and latest technical status.</p>
+        </article>
+        <article class="card">
+          <h3>Not stored</h3>
+          <p>Customer, order, refund, return, sales reversal, subscription records, or full webhook payloads.</p>
+        </article>
+        <article class="card">
+          <h3>AI</h3>
+          <p>Optional, non-destructive, one lightweight call with minimal non-personal context and deterministic fallback.</p>
+        </article>
+      </section>
+
+      <section class="band">
+        <h2>Webhook flow</h2>
+        <ul class="list">
+          <li>Authenticate webhook using Shopify app template helpers.</li>
+          <li>Extract only minimum identifiers.</li>
+          <li>Query minimal Shopify Admin GraphQL context only when processing is active.</li>
+          <li>Record non-sensitive technical status.</li>
+          <li>Discard operational context and webhook payload.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">ReturnSync Mini icon</title>
+  <desc id="desc">A privacy-safe subscription and return sync mark.</desc>
+  <rect width="1200" height="1200" rx="220" fill="#10231f"/>
+  <circle cx="600" cy="600" r="390" fill="#e7f8f2"/>
+  <path d="M392 548c30-126 142-220 276-220 88 0 169 40 222 106" fill="none" stroke="#008060" stroke-width="82" stroke-linecap="round"/>
+  <path d="M850 330l46 154-158-24z" fill="#008060"/>
+  <path d="M808 652c-30 126-142 220-276 220-88 0-169-40-222-106" fill="none" stroke="#2c6ecb" stroke-width="82" stroke-linecap="round"/>
+  <path d="M350 870l-46-154 158 24z" fill="#2c6ecb"/>
+  <rect x="472" y="472" width="256" height="256" rx="64" fill="#10231f"/>
+  <path d="M540 604l44 44 84-96" fill="none" stroke="#e7f8f2" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

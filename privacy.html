@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ReturnSync Mini Privacy Policy</title>
+    <meta
+      name="description"
+      content="ReturnSync Mini privacy policy and data minimization statement."
+    />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="./">
+          <img src="assets/app-icon.svg" alt="" />
+          <span>ReturnSync Mini</span>
+        </a>
+        <div class="nav-links">
+          <a href="support.html">Support</a>
+          <a href="data-safety.html">Data safety</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <p class="eyebrow">Privacy Policy</p>
+        <h1>Privacy by default for refund and subscription follow-up.</h1>
+        <p class="lede">Last updated: April 22, 2026</p>
+      </section>
+
+      <section class="card">
+        <h2>Data We Store</h2>
+        <p>ReturnSync Mini stores only merchant and operational metadata:</p>
+        <ul class="list">
+          <li>Shopify OAuth/session state required to operate the embedded app.</li>
+          <li>Merchant configuration, such as provider, action mode, AI toggle, and billing plan.</li>
+          <li>Shopify Billing metadata needed to determine Free or Pro status.</li>
+          <li>Aggregated monthly refund event counters for plan limits.</li>
+          <li>Latest non-sensitive technical webhook status, such as action code, reason code, provider status, and timestamp.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Data We Do Not Store</h2>
+        <ul class="list">
+          <li>Customer records.</li>
+          <li>Customer names, emails, phone numbers, or addresses.</li>
+          <li>Order records.</li>
+          <li>Refund payloads.</li>
+          <li>Return payloads.</li>
+          <li>Sales reversal data.</li>
+          <li>Subscription data.</li>
+          <li>Full webhook payloads.</li>
+          <li>AI prompts or AI responses containing personal or sensitive operational data.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Webhook Processing</h2>
+        <p>When Shopify sends a webhook, ReturnSync Mini authenticates it, extracts only minimum identifiers, queries only minimal Shopify Admin GraphQL context if processing is active, applies deterministic fallback behavior when needed, logs only non-sensitive technical status, and discards the payload.</p>
+      </section>
+
+      <section class="card">
+        <h2>AI Usage</h2>
+        <p>Optional AI exchange suggestions use only non-personal operational signals. Customer names, emails, phone numbers, addresses, full order data, full return reasons, webhook payloads, and subscription records are not sent to AI providers.</p>
+      </section>
+
+      <section class="card">
+        <h2>Data Retention</h2>
+        <p>Merchant configuration, Shopify session state, billing metadata, aggregated counters, and latest non-sensitive technical status are retained while the app is installed. Shop redact and uninstall webhooks delete merchant configuration, Shopify sessions, and usage metadata.</p>
+      </section>
+
+      <section class="card">
+        <h2>Contact</h2>
+        <p>Support: <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>Privacy: <a href="mailto:privacy@example.com">privacy@example.com</a></p>
+        <p>Replace these placeholder emails before final Shopify App Store submission.</p>
+      </section>
+    </main>
+  </body>
+</html>
