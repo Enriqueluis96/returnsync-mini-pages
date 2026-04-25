@@ -34,10 +34,12 @@
         <p>ReturnSync Mini stores only merchant and operational metadata:</p>
         <ul class="list">
           <li>Shopify OAuth/session state required to operate the embedded app.</li>
-          <li>Merchant configuration, such as provider, action mode, AI toggle, and billing plan.</li>
+          <li>Merchant configuration, such as provider, action mode, delay days, AI toggle, and billing plan.</li>
+          <li>Encrypted provider credentials and non-personal provider connection settings when configured.</li>
           <li>Shopify Billing metadata needed to determine Free or Pro status.</li>
           <li>Aggregated monthly refund event counters for plan limits.</li>
           <li>Latest non-sensitive technical webhook status, such as action code, reason code, provider status, and timestamp.</li>
+          <li>Non-reversible technical idempotency keys for provider actions that already executed.</li>
         </ul>
       </section>
 
@@ -58,7 +60,7 @@
 
       <section class="card">
         <h2>Webhook Processing</h2>
-        <p>When Shopify sends a webhook, ReturnSync Mini authenticates it, extracts only minimum identifiers, queries only minimal Shopify Admin GraphQL context if processing is active, applies deterministic fallback behavior when needed, logs only non-sensitive technical status, and discards the payload.</p>
+        <p>When Shopify sends a webhook, ReturnSync Mini authenticates it, extracts only minimum identifiers and timestamp, queries only minimal Shopify Admin GraphQL context if processing is active, applies deterministic fallback behavior when needed, executes provider follow-up only when one safe target is available, logs only non-sensitive technical status, and discards the payload.</p>
       </section>
 
       <section class="card">
@@ -68,7 +70,7 @@
 
       <section class="card">
         <h2>Data Retention</h2>
-        <p>Merchant configuration, Shopify session state, billing metadata, aggregated counters, and latest non-sensitive technical status are retained while the app is installed. Shop redact and uninstall webhooks delete merchant configuration, Shopify sessions, and usage metadata.</p>
+        <p>Merchant configuration, encrypted provider credentials, Shopify session state, billing metadata, aggregated counters, non-reversible idempotency keys, and latest non-sensitive technical status are retained while the app is installed. Shop redact and uninstall webhooks delete merchant configuration, provider connections, Shopify sessions, idempotency keys, and usage metadata.</p>
       </section>
 
       <section class="card">

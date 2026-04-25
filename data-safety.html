@@ -32,11 +32,11 @@
       <section class="grid">
         <article class="card">
           <h3>Stored</h3>
-          <p>Merchant settings, session state, billing metadata, aggregated usage counters, and latest technical status.</p>
+          <p>Merchant settings, session state, billing metadata, aggregated usage counters, latest technical status, encrypted provider credentials, provider connection settings, and non-reversible idempotency keys.</p>
         </article>
         <article class="card">
           <h3>Not stored</h3>
-          <p>Customer, order, refund, return, sales reversal, subscription records, or full webhook payloads.</p>
+          <p>Customer, order, refund, return, sales reversal, subscription records, raw operational IDs, provider responses, PII, or full webhook payloads.</p>
         </article>
         <article class="card">
           <h3>AI</h3>
@@ -48,8 +48,9 @@
         <h2>Webhook flow</h2>
         <ul class="list">
           <li>Authenticate webhook using Shopify app template helpers.</li>
-          <li>Extract only minimum identifiers.</li>
+          <li>Extract only minimum identifiers and refund timestamp.</li>
           <li>Query minimal Shopify Admin GraphQL context only when processing is active.</li>
+          <li>Execute provider action only when one target and required credentials are available.</li>
           <li>Record non-sensitive technical status.</li>
           <li>Discard operational context and webhook payload.</li>
         </ul>
